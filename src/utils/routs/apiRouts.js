@@ -1,6 +1,6 @@
 const apiRoutes = {
   baseAddress:"https://api.github.com/",
-  getuser: "",
+  getuser: "users/",
   getRepoInfo: "",
 };
 
