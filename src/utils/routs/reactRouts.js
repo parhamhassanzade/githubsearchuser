@@ -1,6 +1,7 @@
 const reactRoutes = {
-  search: "/",
-  history: "/histort",
+  home:"/",
+  search: "/search",
+  history: "/history",
 };
 
 export default reactRoutes;

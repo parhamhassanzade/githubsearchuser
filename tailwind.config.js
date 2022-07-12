@@ -62,9 +62,7 @@ module.exports = {
         "light-green":"#d4dfdb",
       },
       extend: {
-        fontFamily: {
-          sans: ["iranyekan"],
-        },
+       
         boxShadow: {
           "top-menu": "0 8px 24px 0 rgba(0, 0, 0, 0.08)",
           "category-box": "0 4px 16px 0 rgba(0, 0, 0, 0.08)",
@@ -85,7 +83,6 @@ module.exports = {
         lg: { min: "975px" },
       },
       animation: {
-        typing: "typing 8s steps(10,end) 1s 1 normal both, blink-caret 500ms steps(44) infinite;",
       },
       keyframes: {
         typing: {
