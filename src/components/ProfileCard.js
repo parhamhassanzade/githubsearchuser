@@ -1,7 +1,6 @@
 import React from "react";
 import GitHub from "../components/assets/images/GitHub.png";
 const ProfileCard = ({ profileData }) => {
-  console.log(profileData);
   return (
     <div className="mt-5  rounded-lg  border-gray-200 shadow-md p-3 bg-light-green">
       <div className="flex flex-col items-center pb-10">

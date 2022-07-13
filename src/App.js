@@ -4,9 +4,12 @@ import History from "./pages/History";
 import reactRoutes from "./utils/routs/reactRouts";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
+import { ContextProvider } from "./context/GeneralContext";
 
 function App() {
   return (
+    <ContextProvider>
+
     <Router>
       <Layout>
         <Routes>
@@ -16,6 +19,8 @@ function App() {
         </Routes>
       </Layout>
     </Router>
+    </ContextProvider>
+
   );
 }
 

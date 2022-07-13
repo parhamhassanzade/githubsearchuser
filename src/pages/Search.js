@@ -1,20 +1,24 @@
 import { Form, Formik } from "formik";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Input from "../components/Form/input";
 import { Request } from "../api/fetcher";
 import apiRoutes from "../utils/routs/apiRouts";
 import ProfileCard from "../components/ProfileCard";
 import RepoList from "../components/RepoList";
+import { GeneralContext } from "../context/GeneralContext";
+
 const Search = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [profileData, setProfileData] = useState();
   const [repoData, setDataData] = useState();
+  const [info, setInfo] = useContext(GeneralContext);
 
   const SupportFormHandler = async (values, actions) => {
     let response = await Request(apiRoutes.getuser + `${values.username}`);
     if (response.status === 200) {
       await setProfileData(response.data);
       setIsLoading(true);
+      setInfo((prev)=>[...prev,response.data]);
       actions.resetForm();
       getRepository(values);
     }
@@ -25,7 +29,6 @@ const Search = (props) => {
       await setDataData(response.data);
       setIsLoading(true);
     }
-    console.log(response);
   };
   return (
     <main className="container mx-auto px-2 mb-16">
